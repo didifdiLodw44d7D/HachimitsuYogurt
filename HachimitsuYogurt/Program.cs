@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HachimitsuYogurt.Game.Koma;
 
 namespace HachimitsuYogurt
 {
@@ -12,16 +13,27 @@ namespace HachimitsuYogurt
         {
             var board = new Board();
 
-            board.LiftKoma(77);
+            //board.LiftKoma(77);
 
-            board.PutKoma(76);
+            //board.PutKoma(76);
 
             var pattern = new MovablePattern();
 
-            var type = new KomaType();
+            var f_koma = new FutsuKomaType(); // = new Kin();
+            var t_koma = new Kaku(typeof(Kaku));
 
-            // 角を持ち上げたとき
-            var snapshot = pattern.SashitePattern(type.koma["SENTE-KA"], true, 77, board);
+            var reg = new HachimitsuYogurt.Game.Regulation.Regulation();
+
+            t_koma.SashitePattern(t_koma);
+
+            var b = t_koma.TobiKomaMovePattern("Kaku");
+
+            var a = t_koma.MovableKomaMappingBoard(77, null, 0);
+
+            foreach (var s in a)
+                Console.WriteLine(s);
+
+            var snapshot = t_koma.JudgeGouhoute(true, 76, board);
 
             int i = 0;
 

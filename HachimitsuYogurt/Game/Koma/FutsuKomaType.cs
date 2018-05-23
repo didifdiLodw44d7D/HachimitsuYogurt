@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HachimitsuYogurt
+namespace HachimitsuYogurt.Game.Koma
 {
-    class KomaType
+    class FutsuKomaType
     {
+        /*
         public const string Null = "NULL";
 
         public const string sente_OU = "SENTE-OU";
@@ -79,6 +80,38 @@ namespace HachimitsuYogurt
             koma.Add(gote_RY, 213);
             koma.Add(gote_RM, 214);
             koma.Add(gote_TK, 215);
+            */
+
+        private int code;
+        private string name;
+        public List<Point> pattern = new List<Point>();
+
+        public void SetCode(int code)
+        {
+            this.code = code;
+        }
+
+        public int GetCode()
+        {
+            return code;
+        }
+
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
+
+        public void MovePattern()
+        {
+        }
+
+        public void TobiKomaMovePattern()
+        {
 
         }
     }
