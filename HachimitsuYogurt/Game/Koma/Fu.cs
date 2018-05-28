@@ -6,20 +6,15 @@ using System.Threading.Tasks;
 
 namespace HachimitsuYogurt.Game.Koma
 {
-    class Kin : FutsuKomaType
+    class Fu : FutsuKomaType
     {
-        public Kin() : base() { }
+        public Fu() : base() { }
 
         public new List<Point> MovePattern()
         {
             List<Point> vector = new List<Point>();
 
             vector.Add(new Point(0, 1));
-            vector.Add(new Point(1, 1));
-            vector.Add(new Point(1, 0));
-            vector.Add(new Point(0, -1));
-            vector.Add(new Point(-1, 0));
-            vector.Add(new Point(-1, 1));
 
             return vector;
         }

@@ -19,8 +19,6 @@ namespace HachimitsuYogurt
 
             var t_koma = new Kaku();
 
-            var reg = new HachimitsuYogurt.Game.Regulation.Regulation();
-
             var b = t_koma.TobiKomaMovePattern();
 
             var a = t_koma.MovableKomaMappingBoard(77);
@@ -28,7 +26,7 @@ namespace HachimitsuYogurt
             foreach (var s in a)
                 Console.WriteLine(s);
 
-            var snapshot = t_koma.JudgeGouhoute(true, 76, board);
+            var snapshot = t_koma.JudgeGouhoute(true, 77, board);
 
             int i = 0;
 

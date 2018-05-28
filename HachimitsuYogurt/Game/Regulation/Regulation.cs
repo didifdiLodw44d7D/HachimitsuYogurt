@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HachimitsuYogurt.Game.Koma;
 
-namespace HachimitsuYogurt.Game.Regulation
+namespace HachimitsuYogurt
 {
     class Regulation
     {

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HachimitsuYogurt.Game.Koma
 {
-    class Kin : FutsuKomaType
+    class Gyoku : FutsuKomaType
     {
-        public Kin() : base() { }
+        public Gyoku() : base() { }
 
         public new List<Point> MovePattern()
         {
@@ -17,7 +17,9 @@ namespace HachimitsuYogurt.Game.Koma
             vector.Add(new Point(0, 1));
             vector.Add(new Point(1, 1));
             vector.Add(new Point(1, 0));
+            vector.Add(new Point(1, -1));
             vector.Add(new Point(0, -1));
+            vector.Add(new Point(-1, -1));
             vector.Add(new Point(-1, 0));
             vector.Add(new Point(-1, 1));
 

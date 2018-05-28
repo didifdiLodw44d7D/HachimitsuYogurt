@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HachimitsuYogurt.Game.Koma
 {
-    class Kin : FutsuKomaType
+    class NariKyou : FutsuKomaType
     {
-        public Kin() : base() { }
+        public NariKyou() : base() { }
 
         public new List<Point> MovePattern()
         {

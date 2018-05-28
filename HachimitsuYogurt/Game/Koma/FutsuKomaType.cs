@@ -38,18 +38,9 @@ namespace HachimitsuYogurt.Game.Koma
         {
             List<Point> vector = new List<Point>();
 
-            if (this.GetType() == typeof(Kin))
-            {
-                vector.Add(new Point(0, 1));
-                vector.Add(new Point(1, 1));
-                vector.Add(new Point(1, 0));
-                vector.Add(new Point(0, -1));
-                vector.Add(new Point(-1, 0));
-                vector.Add(new Point(-1, 1));
-            }
-
             return vector;
         }
+
         public List<Point> ConvertPoint(List<int> array)
         {
             List<Point> rtn = new List<Point>();
