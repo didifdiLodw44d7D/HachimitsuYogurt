@@ -10,17 +10,15 @@ namespace HachimitsuYogurt.Game.Koma
     {
         private int code;
         private string name;
-        Type type = null;
-
-        public List<Point> pattern = new List<Point>();
         public bool[] movableboard = new bool[81];
 
+        public List<Point> pattern = new List<Point>();
         public List<Point> pattern0 = new List<Point>();
         public List<Point> pattern1 = new List<Point>();
         public List<Point> pattern2 = new List<Point>();
         public List<Point> pattern3 = new List<Point>();
 
-        public TobiKomaType(Type koma)
+        public TobiKomaType()
         {
         }
 
@@ -48,11 +46,11 @@ namespace HachimitsuYogurt.Game.Koma
         {
         }
 
-        public List<Point> TobiKomaMovePattern(string koma_name)
+        public List<Point> TobiKomaMovePattern()
         {
-            List<Point> vector = new List<Point>();          
+            List<Point> vector = new List<Point>();
 
-            if (koma_name == "Kaku")
+            if (this.GetType() == typeof(Kaku))
             {
                 pattern0.Add(new Point(1, 1));
                 pattern0.Add(new Point(2, 2));
@@ -90,6 +88,146 @@ namespace HachimitsuYogurt.Game.Koma
                 pattern3.Add(new Point(-7, 7));
                 pattern3.Add(new Point(-8, 8));
             }
+            else if (this.GetType() == typeof(Hisha))
+            {
+                pattern0.Add(new Point(1, 0));
+                pattern0.Add(new Point(2, 0));
+                pattern0.Add(new Point(3, 0));
+                pattern0.Add(new Point(4, 0));
+                pattern0.Add(new Point(5, 0));
+                pattern0.Add(new Point(6, 0));
+                pattern0.Add(new Point(7, 0));
+                pattern0.Add(new Point(8, 0));
+
+                pattern1.Add(new Point(0, 1));
+                pattern1.Add(new Point(0, 2));
+                pattern1.Add(new Point(0, 3));
+                pattern1.Add(new Point(0, 4));
+                pattern1.Add(new Point(0, 5));
+                pattern1.Add(new Point(0, 6));
+                pattern1.Add(new Point(0, 7));
+                pattern1.Add(new Point(0, 8));
+
+                pattern2.Add(new Point(-1, 0));
+                pattern2.Add(new Point(-2, 0));
+                pattern2.Add(new Point(-3, 0));
+                pattern2.Add(new Point(-4, 0));
+                pattern2.Add(new Point(-5, 0));
+                pattern2.Add(new Point(-6, 0));
+                pattern2.Add(new Point(-7, 0));
+                pattern2.Add(new Point(-8, 0));
+
+                pattern3.Add(new Point(0, -1));
+                pattern3.Add(new Point(0, -2));
+                pattern3.Add(new Point(0, -3));
+                pattern3.Add(new Point(0, -4));
+                pattern3.Add(new Point(0, -5));
+                pattern3.Add(new Point(0, -6));
+                pattern3.Add(new Point(0, -7));
+                pattern3.Add(new Point(0, -8));
+            }
+            if (this.GetType() == typeof(Ryuma))
+            {
+                pattern.Add(new Point(0, 1));
+                pattern.Add(new Point(1, 0));
+                pattern.Add(new Point(0, -1));
+                pattern.Add(new Point(-1, 0));
+
+                pattern0.Add(new Point(1, 1));
+                pattern0.Add(new Point(2, 2));
+                pattern0.Add(new Point(3, 3));
+                pattern0.Add(new Point(4, 4));
+                pattern0.Add(new Point(5, 5));
+                pattern0.Add(new Point(6, 6));
+                pattern0.Add(new Point(7, 7));
+                pattern0.Add(new Point(8, 8));
+
+                pattern1.Add(new Point(1, -1));
+                pattern1.Add(new Point(2, -2));
+                pattern1.Add(new Point(3, -3));
+                pattern1.Add(new Point(4, -4));
+                pattern1.Add(new Point(5, -5));
+                pattern1.Add(new Point(6, -6));
+                pattern1.Add(new Point(7, -7));
+                pattern1.Add(new Point(8, -8));
+
+                pattern2.Add(new Point(-1, -1));
+                pattern2.Add(new Point(-2, -2));
+                pattern2.Add(new Point(-3, -3));
+                pattern2.Add(new Point(-4, -4));
+                pattern2.Add(new Point(-5, -5));
+                pattern2.Add(new Point(-6, -6));
+                pattern2.Add(new Point(-7, -7));
+                pattern2.Add(new Point(-8, -8));
+
+                pattern3.Add(new Point(-1, 1));
+                pattern3.Add(new Point(-2, 2));
+                pattern3.Add(new Point(-3, 3));
+                pattern3.Add(new Point(-4, 4));
+                pattern3.Add(new Point(-5, 5));
+                pattern3.Add(new Point(-6, 6));
+                pattern3.Add(new Point(-7, 7));
+                pattern3.Add(new Point(-8, 8));
+            }
+            else if (this.GetType() == typeof(Ryuou))
+            {
+                pattern.Add(new Point(1, 1));
+                pattern.Add(new Point(1, -1));
+                pattern.Add(new Point(-1, -1));
+                pattern.Add(new Point(-1, 1));
+
+                pattern0.Add(new Point(1, 0));
+                pattern0.Add(new Point(2, 0));
+                pattern0.Add(new Point(3, 0));
+                pattern0.Add(new Point(4, 0));
+                pattern0.Add(new Point(5, 0));
+                pattern0.Add(new Point(6, 0));
+                pattern0.Add(new Point(7, 0));
+                pattern0.Add(new Point(8, 0));
+
+                pattern1.Add(new Point(0, 1));
+                pattern1.Add(new Point(0, 2));
+                pattern1.Add(new Point(0, 3));
+                pattern1.Add(new Point(0, 4));
+                pattern1.Add(new Point(0, 5));
+                pattern1.Add(new Point(0, 6));
+                pattern1.Add(new Point(0, 7));
+                pattern1.Add(new Point(0, 8));
+
+                pattern2.Add(new Point(-1, 0));
+                pattern2.Add(new Point(-2, 0));
+                pattern2.Add(new Point(-3, 0));
+                pattern2.Add(new Point(-4, 0));
+                pattern2.Add(new Point(-5, 0));
+                pattern2.Add(new Point(-6, 0));
+                pattern2.Add(new Point(-7, 0));
+                pattern2.Add(new Point(-8, 0));
+
+                pattern3.Add(new Point(0, -1));
+                pattern3.Add(new Point(0, -2));
+                pattern3.Add(new Point(0, -3));
+                pattern3.Add(new Point(0, -4));
+                pattern3.Add(new Point(0, -5));
+                pattern3.Add(new Point(0, -6));
+                pattern3.Add(new Point(0, -7));
+                pattern3.Add(new Point(0, -8));
+            }
+            else if (this.GetType() == typeof(Keima))
+            {
+                pattern.Add(new Point(1, 2));
+                pattern.Add(new Point(-1, 2));
+            }
+            else if (this.GetType() == typeof(Kyousha))
+            {
+                pattern0.Add(new Point(1, 0));
+                pattern0.Add(new Point(2, 0));
+                pattern0.Add(new Point(3, 0));
+                pattern0.Add(new Point(4, 0));
+                pattern0.Add(new Point(5, 0));
+                pattern0.Add(new Point(6, 0));
+                pattern0.Add(new Point(7, 0));
+                pattern0.Add(new Point(8, 0));
+            }
 
             return vector;
         }
@@ -103,7 +241,14 @@ namespace HachimitsuYogurt.Game.Koma
         {
             List<Point> rtn = new List<Point>();
 
-            var tmp = CalcGouhoute(pattern0, teban, pos, board);
+            var tmp = CalcGouhoute(pattern, teban, pos, board);
+
+            foreach (var s in rtn)
+            {
+                rtn.Add(s);
+            }
+
+            tmp = CalcGouhoute(pattern0, teban, pos, board);
 
             foreach(var s in rtn)
             {
@@ -146,7 +291,7 @@ namespace HachimitsuYogurt.Game.Koma
 
                 //　ここなんか変　y = (y ? (-s.y));
                 x = (x + (-s.x));
-                y = (y - (-s.y));
+                y = (y + (-s.y));
 
                 var tmp = ConvertArrayNumber((y * 10) + x);
 
@@ -196,6 +341,7 @@ namespace HachimitsuYogurt.Game.Koma
         /// <param name="pos">移動させようとする駒の位置(棋譜形式)</param>
         /// <param name="movablepattern">移動させようとする駒の移動可能位置パターン</param>
         /// <returns>移動可能な配列マス形式のインデックス(配列インデックス形式)</returns>
+        /*
         public List<int> MovableKomaMappingBoard(int pos, MovablePattern movablepattern)
         {
             List<Point> movableposition_KIFU = new List<Point>();
@@ -208,7 +354,7 @@ namespace HachimitsuYogurt.Game.Koma
                 int y = pos % (x * 10);
 
                 x = (x + (-s.x));
-                y = (y - (-s.y));
+                y = (y + (-s.y));
 
                 if ((x >= 1 && x <= 9) && (y >= 1 && y <= 9))
                 {
@@ -227,6 +373,7 @@ namespace HachimitsuYogurt.Game.Koma
             }
             return movableposition_ARRAY;
         }
+        */
 
         /// <summary>
         /// 移動させようとする駒の位置と駒の移動パターンから、配列インデックスのリストを返す
@@ -234,19 +381,36 @@ namespace HachimitsuYogurt.Game.Koma
         /// <param name="pos">移動させようとする駒の位置(棋譜形式)</param>
         /// <param name="movablepattern">移動させようとする駒の移動可能位置パターン</param>
         /// <returns>移動可能な配列マス形式のインデックス(配列インデックス形式)</returns>
-        public List<int> MovableKomaMappingBoard(int pos, MovablePattern movablepattern, int dummy)
+        public List<int> MovableKomaMappingBoard(int pos)
         {
             List<Point> movableposition_KIFU = new List<Point>();
             List<int> movableposition_ARRAY = new List<int>();
 
             // pos から、棋譜上で移動パターンをマッピングする
+
+            // 飛車角は、このルーチンに入らない pattern は空。
+
+            foreach (var s in pattern)
+            {
+                int x = pos / 10;
+                int y = pos % (x * 10);
+
+                x = (x + (-s.x));
+                y = (y + (-s.y));
+
+                if ((x >= 1 && x <= 9) && (y >= 1 && y <= 9))
+                {
+                    movableposition_KIFU.Add(new Point(x, y));
+                }
+            }
+
             foreach (var s in pattern0)
             {
                 int x = pos / 10;
                 int y = pos % (x * 10);
 
                 x = (x + (-s.x));
-                y = (y - (-s.y));
+                y = (y + (-s.y));
 
                 if ((x >= 1 && x <= 9) && (y >= 1 && y <= 9))
                 {
@@ -578,17 +742,6 @@ namespace HachimitsuYogurt.Game.Koma
             }
 
             return arrayformat;
-        }
-
-        public void SashitePattern(Object param)
-        {
-            var type = param.GetType();
-
-            if (typeof(Kaku) == param.GetType())
-            {
-                Console.WriteLine("Kaku");
-            }
-            //else if(typeof())
         }
     }
 }

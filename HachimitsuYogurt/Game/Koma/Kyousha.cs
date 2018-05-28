@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace HachimitsuYogurt.Game.Koma
 {
-    interface ITobiKoma
+    class Kyousha : TobiKomaType
     {
-        List<Point> TobiKomaMovePattern();
+        public Kyousha() : base() { }
     }
 }

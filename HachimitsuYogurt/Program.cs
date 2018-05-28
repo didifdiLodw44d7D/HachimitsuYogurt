@@ -17,18 +17,13 @@ namespace HachimitsuYogurt
 
             //board.PutKoma(76);
 
-            var pattern = new MovablePattern();
-
-            var f_koma = new FutsuKomaType(); // = new Kin();
-            var t_koma = new Kaku(typeof(Kaku));
+            var t_koma = new Kaku();
 
             var reg = new HachimitsuYogurt.Game.Regulation.Regulation();
 
-            t_koma.SashitePattern(t_koma);
+            var b = t_koma.TobiKomaMovePattern();
 
-            var b = t_koma.TobiKomaMovePattern("Kaku");
-
-            var a = t_koma.MovableKomaMappingBoard(77, null, 0);
+            var a = t_koma.MovableKomaMappingBoard(77);
 
             foreach (var s in a)
                 Console.WriteLine(s);
@@ -42,44 +37,29 @@ namespace HachimitsuYogurt
                 Console.WriteLine("Array[{0}] = {1}", i, s);
                 i++;
             }
+
+            var kin = new Kin();
+
+            var c = kin.MovePattern();
+
+            var d = kin.MovableKomaMappingBoard(68, c);
+
+            foreach (var s in d)
+                Console.WriteLine(s);
+
+            var snap = kin.JudgeMovableMasu(true, 68, d, board);
+
+            var e = kin.ConvertPoint(d);
+
+            var snapshot_ = kin.JudgeGouhoute(e, true, 68, board);
+
+            i = 0;
+
+            foreach (var s in snapshot_)
+            {
+                Console.WriteLine("Array[{0}] = {1}", i, s);
+                i++;
+            }
         }
     }
 }
-
-/*
-        static void Main(string[] args)
-        {
-            var board = new Board();
-
-            board.LiftKoma(77);
-
-            board.PutKoma(76);
-            
-            var pattern = new MovablePattern();
-
-            var type = new KomaType();
-
-            // 角を持ち上げたとき
-            pattern.SashitePattern(type.koma["SENTE-KA"], true, 88, board);
-
-            var reg = new Regulation();
-
-            var mappingarray = reg.MovableKomaMappingBoard(88, pattern);
-
-            foreach (var s in mappingarray)
-                Console.WriteLine("MappingArray = " + s);
-
-            var snapshot = reg.JudgeMovableMasu(true, 88, mappingarray, board);
-
-            int i = 0;
-            foreach (var s in snapshot)
-            {
-                Console.WriteLine("Array[{0}] = " + s, i);
-                i++;
-            }
-            
-            //スナップショットを走査して、"True"に対して、評価値を振っていく。
-            
-            board.DisplayBoard();
-        } 
-*/

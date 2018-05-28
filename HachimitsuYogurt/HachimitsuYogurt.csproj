@@ -43,17 +43,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engin\Evaluation.cs" />
+    <Compile Include="Game\Koma\Hisha.cs" />
+    <Compile Include="Game\Koma\Keima.cs" />
+    <Compile Include="Game\Koma\Kyousha.cs" />
+    <Compile Include="Game\Koma\Ryuma.cs" />
     <Compile Include="Game\Koma\Kaku.cs" />
     <Compile Include="Game\Koma\FutsuKomaType.cs" />
+    <Compile Include="Game\Koma\Kin.cs" />
+    <Compile Include="Game\Koma\KomaDefine.cs" />
     <Compile Include="Game\Koma\TobiKomaType.cs" />
     <Compile Include="Game\Koma\ITobiKoma.cs" />
     <Compile Include="Masu.cs" />
-    <Compile Include="MovablePattern.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game\Board\Board.cs" />
     <Compile Include="Game\Regulation\Regulation.cs" />
+    <Compile Include="Game\Koma\Ryuou.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
