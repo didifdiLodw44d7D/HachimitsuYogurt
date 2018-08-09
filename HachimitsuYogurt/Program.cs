@@ -17,45 +17,57 @@ namespace HachimitsuYogurt
 
             //board.PutKoma(76);
 
-            var t_koma = new Kaku();
+            //飛びゴマ合法手検索手順
+            
+            /*
+             1. 駒のインスタンスを作成
+             2. 現在の駒位置を指定
+             3. 合法手を検索する
+             */
+            
+            var kaku = new Kaku();
 
-            var b = t_koma.TobiKomaMovePattern();
+            var a = kaku.TobiKomaMovePattern();
 
-            var a = t_koma.MovableKomaMappingBoard(77);
+            var b = kaku.MovableKomaMappingBoard(77);
 
-            foreach (var s in a)
-                Console.WriteLine(s);
+            //foreach (var s in b)
+                //Console.WriteLine(s);
 
-            var snapshot = t_koma.JudgeGouhoute(true, 77, board);
+            var snapshot = kaku.JudgeGouhoute(true, 77, board);
 
             int i = 0;
 
             foreach (var s in snapshot)
             {
-                Console.WriteLine("Array[{0}] = {1}", i, s);
+                Console.WriteLine("Array[{0}] = {1}{2}", i, s.x, s.y);
                 i++;
             }
+
+            /*
+             1. 駒のインスタンスを作成
+             2. 現在の駒位置を指定
+             3. 動けるマスを判定する
+             4. 配列座標をマス座標にコンバートする
+             5. 合法手を検索する
+             */
 
             var kin = new Kin();
 
             var c = kin.MovePattern();
 
-            var d = kin.MovableKomaMappingBoard(68, c);
+            var d = kin.MovableKomaMappingBoard(67, c);
 
-            foreach (var s in d)
-                Console.WriteLine(s);
+            //foreach (var s in d)
+                //Console.WriteLine(s);
 
-            var snap = kin.JudgeMovableMasu(true, 68, d, board);
-
-            var e = kin.ConvertPoint(d);
-
-            var snapshot_ = kin.JudgeGouhoute(e, true, 68, board);
+            var snap = kin.JudgeGouhoute(true, 67, d, board);
 
             i = 0;
 
-            foreach (var s in snapshot_)
+            foreach (var s in snap)
             {
-                Console.WriteLine("Array[{0}] = {1}", i, s);
+                Console.WriteLine("Array[{0}] = {1}{2}", i, s.y, s.x);
                 i++;
             }
         }

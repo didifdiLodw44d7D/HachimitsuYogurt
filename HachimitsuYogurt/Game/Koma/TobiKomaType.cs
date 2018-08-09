@@ -60,35 +60,35 @@ namespace HachimitsuYogurt.Game.Koma
 
             var tmp = CalcGouhoute(pattern, teban, pos, board);
 
-            foreach (var s in rtn)
+            foreach (var s in tmp)
             {
                 rtn.Add(s);
             }
 
             tmp = CalcGouhoute(pattern0, teban, pos, board);
 
-            foreach(var s in rtn)
+            foreach(var s in tmp)
             {
                 rtn.Add(s);
             }
 
             tmp = CalcGouhoute(pattern1, teban, pos, board);
 
-            foreach (var s in rtn)
+            foreach (var s in tmp)
             {
                 rtn.Add(s);
             }
 
             tmp = CalcGouhoute(pattern2, teban, pos, board);
 
-            foreach (var s in rtn)
+            foreach (var s in tmp)
             {
                 rtn.Add(s);
             }
 
             tmp = CalcGouhoute(pattern3, teban, pos, board);
 
-            foreach (var s in rtn)
+            foreach (var s in tmp)
             {
                 rtn.Add(s);
             }
@@ -124,6 +124,7 @@ namespace HachimitsuYogurt.Game.Koma
                 }
             }
 
+            // stopフラグ
             bool flag = false;
 
             List<Point> ret = new List<Point>();
@@ -146,7 +147,9 @@ namespace HachimitsuYogurt.Game.Koma
                 }
 
                 if (!flag)
+                {
                     ret.Add(new Point(s.x, s.y));
+                }
             }
 
             return ret;
@@ -277,8 +280,8 @@ namespace HachimitsuYogurt.Game.Koma
                 }
             }
 
-            foreach (var s in movableposition_KIFU)
-                Console.WriteLine(s.y.ToString() + s.x.ToString());
+            //foreach (var s in movableposition_KIFU)
+                //Console.WriteLine(s.y.ToString() + s.x.ToString());
 
             // マッピングパターンを配列番号に変換する
             foreach (var s in movableposition_KIFU)
@@ -287,7 +290,7 @@ namespace HachimitsuYogurt.Game.Koma
 
                 movableposition_ARRAY.Add(ConvertArrayNumber(tmp));
 
-                Console.WriteLine("tmp = " + tmp + ", " + ConvertArrayNumber(tmp));
+                //Console.WriteLine("tmp = " + tmp + ", " + ConvertArrayNumber(tmp));
             }
             return movableposition_ARRAY;
         }

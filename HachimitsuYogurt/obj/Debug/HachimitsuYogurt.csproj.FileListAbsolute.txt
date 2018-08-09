@@ -1,7 +1,7 @@
 D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\bin\Debug\HachimitsuYogurt.exe.config
 D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\bin\Debug\HachimitsuYogurt.exe
 D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\bin\Debug\HachimitsuYogurt.pdb
-D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\obj\Debug\HachimitsuYogurt.csprojResolveAssemblyReference.cache
 D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\obj\Debug\HachimitsuYogurt.csproj.CoreCompileInputs.cache
 D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\obj\Debug\HachimitsuYogurt.exe
 D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\obj\Debug\HachimitsuYogurt.pdb
+D:\vs2018\HachimitsuYogurt\HachimitsuYogurt\obj\Debug\HachimitsuYogurt.csprojAssemblyReference.cache

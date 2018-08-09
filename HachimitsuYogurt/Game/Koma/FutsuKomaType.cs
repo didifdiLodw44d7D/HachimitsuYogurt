@@ -41,258 +41,255 @@ namespace HachimitsuYogurt.Game.Koma
             return vector;
         }
 
-        public List<Point> ConvertPoint(List<int> array)
+        public List<Point> ConvertPoint(int pos)
         {
             List<Point> rtn = new List<Point>();
 
-            foreach(var s in array)
+            switch (pos)
             {
-                switch (s)
-                {
-                    case 0:
-                        rtn.Add(new Point(1, 1));
-                        break;
-                    case 1:
-                        rtn.Add(new Point(2, 1));
-                        break;
-                    case 2:
-                        rtn.Add(new Point(3, 1));
-                        break;
-                    case 3:
-                        rtn.Add(new Point(4, 1));
-                        break;
-                    case 4:
-                        rtn.Add(new Point(5, 1));
-                        break;
-                    case 5:
-                        rtn.Add(new Point(6, 1));
-                        break;
-                    case 6:
-                        rtn.Add(new Point(7, 1));
-                        break;
-                    case 7:
-                        rtn.Add(new Point(8, 1));
-                        break;
-                    case 8:
-                        rtn.Add(new Point(9, 1));
-                        break;
-                    case 9:
-                        rtn.Add(new Point(1, 2));
-                        break;
-                    case 10:
-                        rtn.Add(new Point(2, 2));
-                        break;
-                    case 11:
-                        rtn.Add(new Point(3, 2));
-                        break;
-                    case 12:
-                        rtn.Add(new Point(4, 2));
-                        break;
-                    case 13:
-                        rtn.Add(new Point(5, 2));
-                        break;
-                    case 14:
-                        rtn.Add(new Point(6, 2));
-                        break;
-                    case 15:
-                        rtn.Add(new Point(7, 2));
-                        break;
-                    case 16:
-                        rtn.Add(new Point(8, 2));
-                        break;
-                    case 17:
-                        rtn.Add(new Point(9, 2));
-                        break;
-                    case 18:
-                        rtn.Add(new Point(1, 3));
-                        break;
-                    case 19:
-                        rtn.Add(new Point(2, 3));
-                        break;
-                    case 20:
-                        rtn.Add(new Point(3, 3));
-                        break;
-                    case 21:
-                        rtn.Add(new Point(4, 3));
-                        break;
-                    case 22:
-                        rtn.Add(new Point(5, 3));
-                        break;
-                    case 23:
-                        rtn.Add(new Point(6, 3));
-                        break;
-                    case 24:
-                        rtn.Add(new Point(7, 3));
-                        break;
-                    case 25:
-                        rtn.Add(new Point(8, 3));
-                        break;
-                    case 26:
-                        rtn.Add(new Point(9, 3));
-                        break;
-                    case 27:
-                        rtn.Add(new Point(1, 4));
-                        break;
-                    case 28:
-                        rtn.Add(new Point(2, 4));
-                        break;
-                    case 29:
-                        rtn.Add(new Point(3, 4));
-                        break;
-                    case 30:
-                        rtn.Add(new Point(4, 4));
-                        break;
-                    case 31:
-                        rtn.Add(new Point(5, 4));
-                        break;
-                    case 32:
-                        rtn.Add(new Point(6, 4));
-                        break;
-                    case 33:
-                        rtn.Add(new Point(7, 4));
-                        break;
-                    case 34:
-                        rtn.Add(new Point(8, 4));
-                        break;
-                    case 35:
-                        rtn.Add(new Point(9, 4));
-                        break;
-                    case 36:
-                        rtn.Add(new Point(1, 5));
-                        break;
-                    case 37:
-                        rtn.Add(new Point(2, 5));
-                        break;
-                    case 38:
-                        rtn.Add(new Point(3, 5));
-                        break;
-                    case 39:
-                        rtn.Add(new Point(4, 5));
-                        break;
-                    case 40:
-                        rtn.Add(new Point(5, 5));
-                        break;
-                    case 41:
-                        rtn.Add(new Point(6, 5));
-                        break;
-                    case 42:
-                        rtn.Add(new Point(7, 5));
-                        break;
-                    case 43:
-                        rtn.Add(new Point(8, 5));
-                        break;
-                    case 44:
-                        rtn.Add(new Point(9, 5));
-                        break;
-                    case 45:
-                        rtn.Add(new Point(1, 6));
-                        break;
-                    case 46:
-                        rtn.Add(new Point(2, 6));
-                        break;
-                    case 47:
-                        rtn.Add(new Point(3, 6));
-                        break;
-                    case 48:
-                        rtn.Add(new Point(4, 6));
-                        break;
-                    case 49:
-                        rtn.Add(new Point(5, 6));
-                        break;
-                    case 50:
-                        rtn.Add(new Point(6, 6));
-                        break;
-                    case 51:
-                        rtn.Add(new Point(7, 6));
-                        break;
-                    case 52:
-                        rtn.Add(new Point(8, 6));
-                        break;
-                    case 53:
-                        rtn.Add(new Point(9, 6));
-                        break;
-                    case 54:
-                        rtn.Add(new Point(7, 1));
-                        break;
-                    case 55:
-                        rtn.Add(new Point(7, 2));
-                        break;
-                    case 56:
-                        rtn.Add(new Point(7, 3));
-                        break;
-                    case 57:
-                        rtn.Add(new Point(7, 4));
-                        break;
-                    case 58:
-                        rtn.Add(new Point(7, 5));
-                        break;
-                    case 59:
-                        rtn.Add(new Point(7, 6));
-                        break;
-                    case 60:
-                        rtn.Add(new Point(7, 7));
-                        break;
-                    case 61:
-                        rtn.Add(new Point(7, 8));
-                        break;
-                    case 62:
-                        rtn.Add(new Point(7, 9));
-                        break;
-                    case 63:
-                        rtn.Add(new Point(8, 1));
-                        break;
-                    case 64:
-                        rtn.Add(new Point(8, 2));
-                        break;
-                    case 65:
-                        rtn.Add(new Point(8, 3));
-                        break;
-                    case 66:
-                        rtn.Add(new Point(8, 4));
-                        break;
-                    case 67:
-                        rtn.Add(new Point(8, 5));
-                        break;
-                    case 68:
-                        rtn.Add(new Point(8, 6));
-                        break; 
-                    case 69:
-                        rtn.Add(new Point(8, 7));
-                        break;
-                    case 70:
-                        rtn.Add(new Point(8, 8));
-                        break;
-                    case 71:
-                        rtn.Add(new Point(8, 9));
-                        break;
-                    case 72:
-                        rtn.Add(new Point(9, 1));
-                        break;
-                    case 73:
-                        rtn.Add(new Point(9, 2));
-                        break;
-                    case 74:
-                        rtn.Add(new Point(9, 3));
-                        break;
-                    case 75:
-                        rtn.Add(new Point(9, 4));
-                        break;
-                    case 76:
-                        rtn.Add(new Point(9, 5));
-                        break;
-                    case 77:
-                        rtn.Add(new Point(9, 6));
-                        break;
-                    case 78:
-                        rtn.Add(new Point(9, 7));
-                        break;
-                    case 79:
-                        rtn.Add(new Point(9, 8));
-                        break;
-                    case 80:
-                        rtn.Add(new Point(9, 9));
-                        break;
-                }
+                case 0:
+                    rtn.Add(new Point(1, 1));
+                    break;
+                case 1:
+                    rtn.Add(new Point(2, 1));
+                    break;
+                case 2:
+                    rtn.Add(new Point(3, 1));
+                    break;
+                case 3:
+                    rtn.Add(new Point(4, 1));
+                    break;
+                case 4:
+                    rtn.Add(new Point(5, 1));
+                    break;
+                case 5:
+                    rtn.Add(new Point(6, 1));
+                    break;
+                case 6:
+                    rtn.Add(new Point(7, 1));
+                    break;
+                case 7:
+                    rtn.Add(new Point(8, 1));
+                    break;
+                case 8:
+                    rtn.Add(new Point(9, 1));
+                    break;
+                case 9:
+                    rtn.Add(new Point(1, 2));
+                    break;
+                case 10:
+                    rtn.Add(new Point(2, 2));
+                    break;
+                case 11:
+                    rtn.Add(new Point(3, 2));
+                    break;
+                case 12:
+                    rtn.Add(new Point(4, 2));
+                    break;
+                case 13:
+                    rtn.Add(new Point(5, 2));
+                    break;
+                case 14:
+                    rtn.Add(new Point(6, 2));
+                    break;
+                case 15:
+                    rtn.Add(new Point(7, 2));
+                    break;
+                case 16:
+                    rtn.Add(new Point(8, 2));
+                    break;
+                case 17:
+                    rtn.Add(new Point(9, 2));
+                    break;
+                case 18:
+                    rtn.Add(new Point(1, 3));
+                    break;
+                case 19:
+                    rtn.Add(new Point(2, 3));
+                    break;
+                case 20:
+                    rtn.Add(new Point(3, 3));
+                    break;
+                case 21:
+                    rtn.Add(new Point(4, 3));
+                    break;
+                case 22:
+                    rtn.Add(new Point(5, 3));
+                    break;
+                case 23:
+                    rtn.Add(new Point(6, 3));
+                    break;
+                case 24:
+                    rtn.Add(new Point(7, 3));
+                    break;
+                case 25:
+                    rtn.Add(new Point(8, 3));
+                    break;
+                case 26:
+                    rtn.Add(new Point(9, 3));
+                    break;
+                case 27:
+                    rtn.Add(new Point(1, 4));
+                    break;
+                case 28:
+                    rtn.Add(new Point(2, 4));
+                    break;
+                case 29:
+                    rtn.Add(new Point(3, 4));
+                    break;
+                case 30:
+                    rtn.Add(new Point(4, 4));
+                    break;
+                case 31:
+                    rtn.Add(new Point(5, 4));
+                    break;
+                case 32:
+                    rtn.Add(new Point(6, 4));
+                    break;
+                case 33:
+                    rtn.Add(new Point(7, 4));
+                    break;
+                case 34:
+                    rtn.Add(new Point(8, 4));
+                    break;
+                case 35:
+                    rtn.Add(new Point(9, 4));
+                    break;
+                case 36:
+                    rtn.Add(new Point(1, 5));
+                    break;
+                case 37:
+                    rtn.Add(new Point(2, 5));
+                    break;
+                case 38:
+                    rtn.Add(new Point(3, 5));
+                    break;
+                case 39:
+                    rtn.Add(new Point(4, 5));
+                    break;
+                case 40:
+                    rtn.Add(new Point(5, 5));
+                    break;
+                case 41:
+                    rtn.Add(new Point(6, 5));
+                    break;
+                case 42:
+                    rtn.Add(new Point(7, 5));
+                    break;
+                case 43:
+                    rtn.Add(new Point(8, 5));
+                    break;
+                case 44:
+                    rtn.Add(new Point(9, 5));
+                    break;
+                case 45:
+                    rtn.Add(new Point(1, 6));
+                    break;
+                case 46:
+                    rtn.Add(new Point(2, 6));
+                    break;
+                case 47:
+                    rtn.Add(new Point(3, 6));
+                    break;
+                case 48:
+                    rtn.Add(new Point(4, 6));
+                    break;
+                case 49:
+                    rtn.Add(new Point(5, 6));
+                    break;
+                case 50:
+                    rtn.Add(new Point(6, 6));
+                    break;
+                case 51:
+                    rtn.Add(new Point(7, 6));
+                    break;
+                case 52:
+                    rtn.Add(new Point(8, 6));
+                    break;
+                case 53:
+                    rtn.Add(new Point(9, 6));
+                    break;
+                case 54:
+                    rtn.Add(new Point(7, 1));
+                    break;
+                case 55:
+                    rtn.Add(new Point(7, 2));
+                    break;
+                case 56:
+                    rtn.Add(new Point(7, 3));
+                    break;
+                case 57:
+                    rtn.Add(new Point(7, 4));
+                    break;
+                case 58:
+                    rtn.Add(new Point(7, 5));
+                    break;
+                case 59:
+                    rtn.Add(new Point(7, 6));
+                    break;
+                case 60:
+                    rtn.Add(new Point(7, 7));
+                    break;
+                case 61:
+                    rtn.Add(new Point(7, 8));
+                    break;
+                case 62:
+                    rtn.Add(new Point(7, 9));
+                    break;
+                case 63:
+                    rtn.Add(new Point(8, 1));
+                    break;
+                case 64:
+                    rtn.Add(new Point(8, 2));
+                    break;
+                case 65:
+                    rtn.Add(new Point(8, 3));
+                    break;
+                case 66:
+                    rtn.Add(new Point(8, 4));
+                    break;
+                case 67:
+                    rtn.Add(new Point(8, 5));
+                    break;
+                case 68:
+                    rtn.Add(new Point(8, 6));
+                    break;
+                case 69:
+                    rtn.Add(new Point(8, 7));
+                    break;
+                case 70:
+                    rtn.Add(new Point(8, 8));
+                    break;
+                case 71:
+                    rtn.Add(new Point(8, 9));
+                    break;
+                case 72:
+                    rtn.Add(new Point(9, 1));
+                    break;
+                case 73:
+                    rtn.Add(new Point(9, 2));
+                    break;
+                case 74:
+                    rtn.Add(new Point(9, 3));
+                    break;
+                case 75:
+                    rtn.Add(new Point(9, 4));
+                    break;
+                case 76:
+                    rtn.Add(new Point(9, 5));
+                    break;
+                case 77:
+                    rtn.Add(new Point(9, 6));
+                    break;
+                case 78:
+                    rtn.Add(new Point(9, 7));
+                    break;
+                case 79:
+                    rtn.Add(new Point(9, 8));
+                    break;
+                case 80:
+                    rtn.Add(new Point(9, 9));
+                    break;                
             }
 
             return rtn;
@@ -303,62 +300,77 @@ namespace HachimitsuYogurt.Game.Koma
         // now_state_koma に、置きゴマの種類を記録する
         // foreach で、vector をまわして、行き止まりかどうか、指せる手かどうかを判定する
 
-        public List<Point> JudgeGouhoute(List<Point> vector, bool teban, int pos, Board board)
+        public List<Point> JudgeGouhoute(bool teban, int pos, List<int> sashite, Board board)
         {
-            // 棋譜と配列の使い分け、ぐちゃぐちゃ
-            List<PointEx> rtn = new List<PointEx>();
+            List<Point> rtn = new List<Point>();
 
-            foreach (var s in vector)
+            for (int i = 0; i < 81; i++)
             {
-                int x = pos / 10;
-                int y = pos % (x * 10);
+                movableboard[i] = false;
 
-                //　ここなんか変　y = (y ? (-s.y));
-                x = (x + (-s.x));
-                y = (y + (-s.y));
+                bool atari = false;
 
-                var tmp = ConvertArrayNumber((y * 10) + x);
-
-                if (-1 < tmp && 81 > tmp)
+                foreach (var s in sashite)
                 {
-                    if (teban)
+                    if (i == s)
                     {
-                        rtn.Add(new PointEx(x, y, board.board[tmp].koma_num));
-                    }
-                    else
-                    {
+                        if (teban)
+                        {
+                            if (1 == (board.board[i].koma_num / 100))
+                            {
+                                // 先手番自駒の時は false を返す
+                                movableboard[i] = false;
+                                atari = true;
+                            }
+                            else if (1 == (board.board[i].koma_num / 200))
+                            {
+                                if (atari)
+                                {
+                                    movableboard[i] = false;
+                                }
+                                else
+                                {
+                                    movableboard[i] = true;
+                                    atari = true;
+                                }
+                            }
+                            else
+                            {
+                                if (atari)
+                                    movableboard[i] = false;
+                                else
+                                    movableboard[i] = true;
+                            }
+                        }
+                        else
+                        {
+                            if (2 == (board.board[i].koma_num / 200))
+                            {
+                                // 後手番自駒の時は false を返す
+                                movableboard[i] = false;
+                                atari = true;
+                            }
+                            else
+                            {
+                                movableboard[i] = true;
+                            }
+                        }
                     }
                 }
-
-                Console.WriteLine("rtn = " + s);
             }
 
-            bool flag = false;
-
-            List<Point> ret = new List<Point>();
-
-            foreach (var s in rtn)
+            for(int i=0;i<81;i++)
             {
-                if (1 == (s.now_state_koma / 100))
+                if(true == movableboard[i])
                 {
-                    flag = true;
+                    var a = ConvertPoint(i);
+                    rtn.Add(a[0]);
                 }
-                else if (1 == (s.now_state_koma / 200) && flag == false)
-                {
-                    flag = true;
-
-                    ret.Add(new Point(s.x, s.y));
-                }
-                else if (1 == (s.now_state_koma / 200) && flag == true)
-                {
-                    flag = true;
-                }
-
-                if (!flag)
-                    ret.Add(new Point(s.x, s.y));
             }
 
-            return ret;
+            //return movableboard;
+
+            return rtn;
         }
 
         /// <summary>
@@ -394,7 +406,7 @@ namespace HachimitsuYogurt.Game.Koma
 
                 movableposition_ARRAY.Add(ConvertArrayNumber(tmp));
 
-                Console.WriteLine("tmp = " + tmp + ", " + ConvertArrayNumber(tmp));
+                //Console.WriteLine("tmp = " + tmp + ", " + ConvertArrayNumber(tmp));
             }
             return movableposition_ARRAY;
         }
