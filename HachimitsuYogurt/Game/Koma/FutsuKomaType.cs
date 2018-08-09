@@ -359,16 +359,22 @@ namespace HachimitsuYogurt.Game.Koma
                 }
             }
 
+            
+
             for(int i=0;i<81;i++)
             {
                 if(true == movableboard[i])
                 {
-                    var a = ConvertPoint(i);
-                    rtn.Add(a[0]);
+                    int y = i / 10;
+
+                    if (0 == y)
+                        break;
+
+                    int x = i % (y * 10);
+
+                    rtn.Add(new Point(x, y));
                 }
             }
-
-            //return movableboard;
 
             return rtn;
         }
